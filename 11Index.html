@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* 공통 스타일 */
+        body {
+            text-align: center;
+            background-image: url('484848.jpeg'); /* 배경 이미지 추가 */
+            background-size: cover; /* 배경 이미지 크기 조절 */
+            color: #fff; /* Set text color to white */
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3개의 열 */
+            grid-gap: 10px; /* 열 간격 조정 */
+            justify-content: center;
+            margin-top: 30px; /* 이미지와 상단 간격 조정 */
+        }
+
+        .grid-item {
+            max-width: 100%;
+            height: auto;
+            opacity: 0; /* Start with 0 opacity to hide the images */
+            animation: fade-in-out 12s infinite; /* Apply the fade-in-out animation */
+        }
+
+        .text {
+            color: #fff;
+            font-size: 10px;
+            text-align: center;
+        }
+
+        @keyframes fade-in-out {
+            0%, 100% {
+                opacity: 0;
+            }
+            16.67%, 83.33% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="back">
+        <a target="_blank" href="www.html">
+            <img class="moon" src="38.jpeg" style="max-width: 100%; height: auto;" alt="달덩이">
+        </a>
+    </div>
+ 
+    </div>
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="28.jpeg" class="grid-item" alt="이미지 1">
+        </div>
+        <div class="grid-item">
+            <img src="39.jpeg" class="grid-item" alt="이미지 2">
+        </div>
+        <div class="grid-item">
+            <img src="41.jpeg" class="grid-item" alt="이미지 3">
+        </div>
+        <div class="grid-item">
+            <img src="27.png" class="grid-item" alt="이미지 4">
+        </div>
+        <div class="grid-item">
+            <img src="40.jpeg" class="grid-item" alt="이미지 5">
+        </div>
+        <div class="grid-item">
+            <img src="43.jpeg" class="grid-item" alt="이미지 6">
+        </div>
+    </div>
+
+    <div class="text" style="margin-top: 3rem;"> <!-- Adjusted margin-top -->
+        One day, precious relationships come to us. 
+        <div class="text">
+            Maybe it wasn't a relationship we'd already met before we met?
+        </div>
+    </div>
+
+    <script>
+        function selectMenuItem(menuItem) {
+            const menuItems = document.querySelectorAll('#menu-item');
+            menuItems.forEach(item => item.classList.remove('active'));
+            document.getElementById(menuItem).classList add('active');
+        }
+    </script>
+</body>
+</html>
